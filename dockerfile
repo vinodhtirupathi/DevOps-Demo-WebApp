@@ -2,11 +2,8 @@ from tomcat:8.0.20-jre8
 
 RUN mkdir /usr/local/tomcat/webapps/mywebapp 
 
-RUN mkdir /usr/local/tomcat/conf
-
 RUN cd /usr/local/tomcat/conf
 
-RUN touch tomcat-users.xml
 
 RUN sed -i 's+</tomcat-users>+  <role rolename="admin-script"/>+gI' /usr/local/tomcat/conf/tomcat-users.xml
 RUN echo '  <role rolename="manager"/>'  >> /usr/local/tomcat/conf/tomcat-users.xml
