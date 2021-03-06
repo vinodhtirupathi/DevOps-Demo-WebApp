@@ -2,9 +2,9 @@ from tomcat:8.0.20-jre8
 
 RUN mkdir /usr/local/tomcat/webapps/mywebapp 
 
-RUN mkdir /var/lib/tomcat8/conf/
+RUN mkdir /var/lib/tomcat8/conf
 
-RUN cd /var/lib/tomcat8/conf/
+RUN cd /var/lib/tomcat8/conf
 
 RUN touch tomcat-users.xml
 
